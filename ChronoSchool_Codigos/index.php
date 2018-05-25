@@ -5,14 +5,13 @@
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
 	</head>
-	<body>
-	
+	<body>	
 	<header>
 		<div class="divLogo">
 			<img class="logo" src="logo.png" title="ChronoSchool"/>			
 				<div class="divLogin">
 				<a href="login.php"> 
-					<input type="button" class="botaoHeader" value="LOGIN">
+					<input type="button" class="botaoHeader" value="Login">
 				</a>
 			</div>
 		</div>

@@ -24,7 +24,8 @@ body
 }
 .divLogo{
 	text-align: center;
-	min-width: 70%;	
+	min-width: 30%;
+	padding-left: 10%;
 }
 .divLogin{
 	float: right;
@@ -37,23 +38,18 @@ body
 }
 .divBotaoCorpo{
 	padding-top:20%;
-	padding-right:45%;
+	padding-right:42%;
 }
 
 .botaoHeader{
   color: #252525;
   font-size: 20px;
-  background: #0062FF;
-  padding: 15px;
+  background: #007bff;
+  padding: 15%;
+  padding-left: 40px;
+  padding-right: 40px;
   text-decoration: none;
   border: none;
-  
-  color: #ffffff;
-  font-size: 30px;
-  background: #0062FF;
-  padding: 30px 50px 30px 50px;
-  text-decoration: none;
-
   float:right;
 }
 
@@ -62,21 +58,16 @@ body
   text-decoration: none;
 }
 .botaoCorpo{
-  color: #ffffff;
+  color: #252525;
   font-size: 30px;
-  background: #0062FF;
-  padding: 30px 50px 30px 50px;
+  background: #007bff;
+  padding: 45px;
   text-decoration: none;
   border: none;
   float:right;
 }
 
 .botaoCorpo:hover {
-  background: #0062FF;
-  background-image: -webkit-linear-gradient(top, #0062FF, #0062CC);
-  background-image: -moz-linear-gradient(top, #0062FF, #0062CC);
-  background-image: -ms-linear-gradient(top, #0062FF, #0062CC);
-  background-image: -o-linear-gradient(top, #0062FF, #0062CC);
-  background-image: linear-gradient(to bottom, #0062FF, #0062CC);
+  background: #0064CC;
   text-decoration: none;
 }
