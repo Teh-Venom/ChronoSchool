@@ -3,11 +3,11 @@
 	<head>
 	  <title>Registro</title>
 	  <!-- Bootstrap core CSS-->
-	  <link href="bootstrap.css" rel="stylesheet">
+	  <link href="css/bootstrap.css" rel="stylesheet">
 	  <!-- Custom fonts for this template-->
-	  <link href="fonte.css" rel="stylesheet" type="text/css">
+	  <link href="css/fonte.css" rel="stylesheet" type="text/css">
 	  <!-- Custom styles for this template-->
-	  <link href="registro.css" rel="stylesheet">
+	  <link href="css/registro.css" rel="stylesheet">
 	</head>
 	<?php
 	 if(isset($_POST["registrar"]))
