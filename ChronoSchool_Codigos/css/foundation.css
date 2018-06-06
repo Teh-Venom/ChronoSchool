@@ -508,7 +508,7 @@ textarea {
 .grid-container {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  max-width: 75rem;
+  max-width: 45rem;
   margin: 0 auto; }
   @media print, screen and (min-width: 40em) {
     .grid-container {
@@ -3334,10 +3334,10 @@ select {
   .callout > :last-child {
     margin-bottom: 0; }
   .callout.primary {
-    background-color: #d7ecfa;
+    background-color: #CCCCCC;
     color: #0a0a0a; }
   .callout.secondary {
-    background-color: #eaeaea;
+    background-color: #CCCCCC;
     color: #0a0a0a; }
   .callout.success {
     background-color: #e1faea;
