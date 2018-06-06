@@ -1,7 +1,16 @@
+html{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	min-width:100%;
+	min-height:100%;
+}
 header,footer{ 
 	background-color: #252525;
 	margin: 0 auto;
 	max-width: 900px;
+	
 }
 footer{
 	position: absolute; 
@@ -14,18 +23,14 @@ footer{
 }
 body
 {
-   margin:0;
-   padding:0;
-   width: 100%;
-   min-height:100%;
-   height: 100%;
    background-image: url("../images/fundo.jpg");
    background-repeat: no-repeat;
-   min-height:100%;
-
    background-position: center;
    background-size: cover;
+   width: 100%;
+   height: 100%;
 }
+
 .logo{
 	padding-top: 5px;	
 	width:200px;
@@ -49,7 +54,7 @@ body
 }
 .divCorpo{
 	min-width:100%;
-	min-height:600px;
+	min-height:200px;
 }
 .divBotaoCorpo{
 	padding-top:20%;
@@ -57,7 +62,7 @@ body
 }
 
 .botaoHeader{
-  color: #252525;
+  color: #fff;
   font-size: 20px;
   background: #007bff;
   padding: 15%;
@@ -116,7 +121,6 @@ body
 	text-decoration: none;
 	font: 17px arial;
 	color: #fff;
-	
 	display: block;
 	margin: 0;
 	padding: 13px 0px 12px 0px;
@@ -133,13 +137,11 @@ body
 
 #navbar ul li ul{
 	display: none;
-	width: 100px;
-	position: absolute;
-	top:68px;
-	padding: 0px;
+	width: 180px;
+	padding: 0px 0px 45px 0px;
 	margin: 0px;
 	float: left;
-	background: green;
+	background: #0062FF;
 }
 
 #navbar ul li:hover ul{
@@ -149,12 +151,17 @@ body
 #navbar ul li ul li{
 	display: inline;
 	float: left;
+	width: 100%;
+	height: 100%;
 }
 
 #navbar ul li ul li a{
-	//width: 178px;
-	border-bottom: 1px solid lightgreen;
+	border-bottom: 1px solid #252525;
 }
 
+#navbar ul li ul li a:hover{
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
 
 /*fim style navbar*/
