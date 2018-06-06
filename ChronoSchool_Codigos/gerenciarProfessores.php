@@ -7,16 +7,16 @@
 	</head>
 	<body>	
 	<header>
-		<div class="divLogo">
-			<img class="logo" src="images/logo.png" title="ChronoSchool"/>			
-				<div class="divLogin">
-				<a href="login.php"> 
-					<input type="button" class="botaoHeader" value="Login">
-				</a>
-			</div>
-		</div>
+		<?php
+			include "php/header.php";
+			include "php/navbar.php";
+		?>
 	</header>
 	
+	<div class="divCorpo">			
+		
+		
+	</div>	
 	
 	<footer>
 		<div>
