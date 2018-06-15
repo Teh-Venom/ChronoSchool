@@ -14,7 +14,7 @@
 					
 		<div class="corpo">
 			<div class="conteudo">
-				<a href="registro.php"> 
+				<a href="registro.php" class="verticalElement"> 
 					<input type="button" class="botaoCorpo" value="Registre-se">
 				</a>
 				

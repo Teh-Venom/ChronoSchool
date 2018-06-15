@@ -1,8 +1,8 @@
-<div class='divLogo'>
+<div class='divLogoHeader'>
 	<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
-		<div class='divLogin'>
-		<a href='login.php'> 
-			<input type='button' class='botaoHeader' value='Login'>
-		</a>
-	</div>
+		<div class='divBotaoLogin'>
+			<a href='login.php'> 
+				<input type='button' class='botaoLoginHeader' value='Login'>
+			</a>
+		</div>
 </div>
