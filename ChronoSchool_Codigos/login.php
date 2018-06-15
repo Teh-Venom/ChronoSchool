@@ -10,17 +10,13 @@
 	  <link href="css/registro.css" rel="stylesheet">
 	</head>
 	<?php
-	 if(isset($_POST["registrar"]))
+	 if(isset($_POST["login"]))
 	 {
-		include "registro_funcoes.php";
-		
-		$nome = $_POST['primeiroNome'];
-		$ultNome = $_POST['ultimoNome'];
+		include "php/login_funcoes.php";
 		$email = $_POST['email'];
-		$senha = $_POST['senha'];
-		$confSenha = $_POST['confSenha'];
-		
-		registrar($nome,$ultNome,$email,$senha,$confSenha);
+    $senha = $_POST['senha'];
+
+    logar($email,$senha);
 	 }
 	
 	?>
@@ -34,11 +30,11 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="exampleInputName">E-mail:</label>
-                <input class="form-control" name="primeiroNome" id="exampleInputName" type="email" aria-describedby="nameHelp" placeholder="E-mail" required>
+                <input class="form-control" name="email" id="exampleInputName" type="email" aria-describedby="nameHelp" placeholder="E-mail" required>
               </div>
               <div class="col-md-6">
                 <label for="exampleInputLastName">Senha:</label>	
-                <input class="form-control" name="ultimoNome" id="exampleInputLastName" type="password" aria-describedby="nameHelp" placeholder="Senha" required>
+                <input class="form-control" name="senha" id="exampleInputLastName" type="password" aria-describedby="nameHelp" placeholder="Senha" required>
               </div>
             </div>
           </div>
