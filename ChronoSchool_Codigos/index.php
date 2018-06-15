@@ -17,6 +17,8 @@
 				<a href="registro.php"> 
 					<input type="button" class="botaoCorpo" value="Registre-se">
 				</a>
+				
+
 			</div>
 		</div>
 
