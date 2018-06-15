@@ -61,8 +61,8 @@
           <input type="submit" name="registrar" class="btn btn-primary btn-block" href="login.html" value="Registrar" required>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="login.html">Página de Login</a>
-          <a class="d-block small" href="forgot-password.html">Esqueceu sua senha?</a>
+          <a class="d-block small mt-3" href="login.php">Página de Login</a>
+          <a class="d-block small" href="#">Esqueceu sua senha?</a>
         </div>
       </div>
     </div>

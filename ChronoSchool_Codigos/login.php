@@ -39,6 +39,9 @@
             </div>
           </div>
           <input type="submit" name="login" class="btn btn-primary btn-block" value="Login" required>
+          <div class="text-center">
+            <a class="d-block small" href="registro.php">Ou registre-se</a>
+          </div>
         </form>
         
       </div>

@@ -34,10 +34,8 @@ body
 	flex-direction: column
 }
 
-
-
 .logo{
-	padding-top: 5px;	
+	padding-top: 10px;	
 	width:200px;
 	height:80px;
 }
@@ -45,7 +43,6 @@ body
 .divLogoHeader{
 	text-align: center;
 	min-width: 30%;
-	padding-left: 10%;
 }
 
 .divBotaoLogin{
@@ -102,6 +99,10 @@ body
 
 .conteudo{
 	margin: auto;
+}
+
+.fundo{
+	background-color: #FFFFFF;
 }
 
 
