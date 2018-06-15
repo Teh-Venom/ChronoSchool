@@ -6,24 +6,24 @@
 		<title>Pagina principal</title>
 	</head>
 	<body>	
-
-			<header>
-				<?php
-					include "php/header.php";
-				?>
-			</header>
-			
-				
-			<div class="divBotaoCorpo">
+		<header>
+			<?php
+				include "php/header.php";
+			?>
+		</header>
+					
+		<div class="corpo">
+			<div class="conteudo">
 				<a href="registro.php"> 
 					<input type="button" class="botaoCorpo" value="Registre-se">
 				</a>
 			</div>
+		</div>
 
-			<footer >
-				<div>
-					<img class="logo" src="images/logo.png" title="ChronoSchool"/>			
-				</div>
-			</footer>
+		<footer>
+			<div>
+				<img class="logo" src="images/logo.png" title="ChronoSchool"/>			
+			</div>
+		</footer>
 	</body>	
 </html>

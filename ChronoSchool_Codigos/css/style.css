@@ -13,7 +13,6 @@ header,footer{
 	
 }
 footer{
-	position: absolute; 
 	left: 0; 
 	right: 0; 
 	bottom: 0;
@@ -23,12 +22,12 @@ footer{
 }
 body
 {
-   background-image: url("../images/fundo.jpg");
+   background: url("../images/fundo.jpg")center center no-repeat fixed; 
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center fixed;
    background-size: cover;
    width: 100%;
-   height: 100%;
+   height: 100%;	
 }
 
 .logo{
@@ -52,13 +51,11 @@ body
 	padding-right:20px;
 	padding-top:15px;
 }
-.divCorpo{
-	min-width:100%;
-	min-height:200px;
-}
-.divBotaoCorpo{
-	padding-top:20%;
-	padding-right:42%;
+
+.conteudo{
+	text-align: center; 
+	padding-top: 20%;
+	padding-bottom: 20%;
 }
 
 .botaoHeader{
@@ -78,19 +75,32 @@ body
   text-decoration: none;
 }
 .botaoCorpo{
-  color: #252525;
-  font-size: 30px;
+  padding-top: 50%;
+  padding-right: 50%;
+  color: #FFFFFF;
+  font-size: 25px;
   background: #007bff;
-  padding: 45px;
+  padding: 25px;
   text-decoration: none;
   border: none;
-  float:right;
 }
 
 .botaoCorpo:hover {
   background: #0064CC;
   text-decoration: none;
 }
+
+.corpo{
+	min-width: 900px;
+	margin: 0 auto;
+	max-width: 900px;
+	min-height: 73.1%;
+	height: auto;
+}
+.conteudo{
+	text-align: center;	
+}
+
 
 /* Style NAVBAR MENU */
 

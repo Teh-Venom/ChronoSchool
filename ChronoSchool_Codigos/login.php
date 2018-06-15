@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
 	<head>
-	  <title>Cadastrar Professor</title>
+	  <title>Login</title>
 	  <!-- Bootstrap core CSS-->
 	  <link href="css/bootstrap.css" rel="stylesheet">
 	  <!-- Custom fonts for this template-->
@@ -12,40 +12,39 @@
 	<?php
 	 if(isset($_POST["registrar"]))
 	 {
-		$nomeCompleto = $_POS['nomeCompleto'];
-		$horaInicial = $_POS['horaInicial'];
-		$horaFinal = $_POS['horaFinal'];
-		 
+		include "registro_funcoes.php";
+		
+		$nome = $_POST['primeiroNome'];
+		$ultNome = $_POST['ultimoNome'];
+		$email = $_POST['email'];
+		$senha = $_POST['senha'];
+		$confSenha = $_POST['confSenha'];
+		
+		registrar($nome,$ultNome,$email,$senha,$confSenha);
 	 }
 	
 	?>
 <body class="bg-dark">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Registrar um  Professor</div>
+      <div class="card-header">Login no ChronoSchool</div>
       <div class="card-body">
         <form action="" method="POST">
           <div class="form-group">
-			<label for="inputName">Nome Completo</label>
-			<input class="form-control" name="nomeCompleto" id="inputName" type="text" aria-describedby="nameHelp" placeholder="Nome Completo">
-          </div>
-          <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="inputHoraInicial">Hora Disponível Inicial</label>
-                <input class="form-control" name="horaInicial" id="inputHoraInicial" type="time" placeholder="Hora Inicial">
+                <label for="exampleInputName">E-mail:</label>
+                <input class="form-control" name="primeiroNome" id="exampleInputName" type="email" aria-describedby="nameHelp" placeholder="E-mail" required>
               </div>
               <div class="col-md-6">
-                <label for="inputHoraFinal">Hora Disponível Final</label>
-                <input class="form-control" name="horaFinal" id="inputHoraFinal" type="time" placeholder="Hora Final">
+                <label for="exampleInputLastName">Senha:</label>	
+                <input class="form-control" name="ultimoNome" id="exampleInputLastName" type="password" aria-describedby="nameHelp" placeholder="Senha" required>
               </div>
             </div>
           </div>
-          <input type="submit" name="registrar" class="btn btn-primary btn-block" href="login.html" value="Registrar">
+          <input type="submit" name="login" class="btn btn-primary btn-block" value="Login" required>
         </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="professores.html">Retornar</a>
-        </div>
+        
       </div>
     </div>
   </div>
