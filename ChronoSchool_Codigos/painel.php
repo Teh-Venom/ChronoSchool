@@ -2,11 +2,11 @@
 <html lang="pt-br">
 	<head>
 		<?php
-			session_start();
-			if($_SESSION['email'] == null)
-			{
-				header("Location: index.php");
-			}
+			//session_start();
+			//if($_SESSION['email'] == null)
+			//{
+			//	header("Location: index.php");
+			//}
 		?>
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
@@ -14,7 +14,7 @@
 	</head>
 	<body>	
 	<header>
-		<div class='divLogo'>
+		<div class='divLogoHeader'>
 			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
 				<div class='divLogin'>
 				
@@ -22,7 +22,7 @@
 		</div>
 
 		<?php
-						include "php/navbar.php";
+			include "php/navbar.php";
 		?>
 	</header>
 	

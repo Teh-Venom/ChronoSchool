@@ -43,6 +43,7 @@ body
 .divLogoHeader{
 	text-align: center;
 	min-width: 30%;
+	height: 89px;
 }
 
 .divBotaoLogin{
@@ -95,6 +96,7 @@ body
 	display: inline-flex;
 	flex: 1;
 	overflow: auto;
+	z-index : -1;
 }
 
 .conteudo{
@@ -112,6 +114,7 @@ body
 	text-align: center;
 	height: 45px;
 	background: #0062FF;
+	
 }
 #navbar ul{
 	margin:0px;
@@ -128,6 +131,7 @@ body
 	height: 100%;
     margin:0;
     padding:0;
+
 }
 
 #navbar ul li a{
@@ -160,6 +164,7 @@ body
 
 #navbar ul li:hover ul{
 	display: block;
+	
 }
 
 #navbar ul li ul li{
