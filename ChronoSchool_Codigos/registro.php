@@ -10,6 +10,10 @@
 	  <link href="css/registro.css" rel="stylesheet">
 	</head>
 	<?php
+    if($_SESSION['email'] != null)
+    {
+      header("location: painel.php");
+    }
 	 if(isset($_POST["registrar"]))
 	 {
 		include "registro_funcoes.php";
@@ -62,7 +66,6 @@
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login.php">Página de Login</a>
-          <a class="d-block small" href="#">Esqueceu sua senha?</a>
         </div>
       </div>
     </div>
