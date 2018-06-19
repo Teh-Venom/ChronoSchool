@@ -4,7 +4,8 @@
 		<link href="css/foundation.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<?php
-			if($_SESSION['email'] == null)
+			session_start();
+			if($_SESSION == null)
 			{
 				header("location: login.php");
 			}
@@ -51,7 +52,7 @@
 		</div>
 		<footer>
 			<center>
-				<h1> FOOTER</h1>
+				<h1>Footer</h1>
 			</center>
 		</footer>
 	</body>
