@@ -19,6 +19,10 @@
     logar($email,$senha);
 	 }
 	
+    if($_SESSION != null)
+    {
+      header("Location: menuPrincipal.php");
+    }
 	?>
 <body class="bg-dark">
   <div class="container">
