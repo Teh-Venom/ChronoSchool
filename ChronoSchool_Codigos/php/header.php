@@ -4,8 +4,8 @@
 								<input type='button' class='botaoLoginHeader' value='Login' />
 							</a>
 						</div>";
-	session_start();
-	if(isset($_SESSION)){
+
+	if($_SESSION != null){
 		$stringBotaoHtml = "<div class='divBotaoLogin'>
 								<a href='login.php'> 
 									<input type='button' class='botaoLoginHeader' value='Menu' />

@@ -10,6 +10,7 @@
 			{
 				header("location: menuPrincipal.php");
 			}
+
 		?>
 	</head>
 	<body>	

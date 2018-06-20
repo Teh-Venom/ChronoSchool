@@ -2,11 +2,11 @@
 <html lang="pt-br">
 	<head>
 		<?php
-			//session_start();
-			//if($_SESSION['email'] == null)
-			//{
-			//	header("Location: index.php");
-			//}
+			session_start();
+			if($_SESSION['email'] == null)
+			{
+				header("Location: index.php");
+			}
 		?>
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
