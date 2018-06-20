@@ -16,33 +16,44 @@
 		<header>
 			<?php
 				include "php/header.php";
-			?>
-		</header>
-		<nav>
+			?>	
+			<nav>
 			<?php
 				include "php/navbar.php";
 			?>
-		</nav>
+			</nav>
+		</header>
 		
-		<div class="corpo"> 
-			<div class="conteudo">
-				<form action="" method="POST">
-
-					<div class="large-6 medium-6 cell">											
-						<div class="primary callout">
-							Nome do Usuario
-							<a href="#" class="button">Alterar</a>
-						</div>
-					</div>
-					
-				</form>
+		<div class="">
+			<p> </p>
+		</div>
+		<div class="divCorpo">
+			<div class="grid-container">
+				<div class="callout"> 														
+					<center class="grid-container">	
+						<form action="" method="POST">
+							<div class="large-6 medium-6 cell">											
+								<div class="primary callout">
+									Nome do Usuario
+									<a href="#" class="button">Alterar</a>
+								</div>
+							</div>
+							
+							<div class="large-6 medium-6 cell">											
+								<div class="primary callout">
+									Nome do Usuario
+									<a href="#" class="button">Alterar</a>
+								</div>
+							</div>
+						</form>
+					</center>
+				</div>
 			</div>
 		</div>
-
 		<footer>
-			<div>
-				<img class="logo" src="images/logo.png" title="ChronoSchool"/>			
-			</div>
+			<center>
+				<h1>Footer</h1>
+			</center>
 		</footer>
 	</body>
 </html>
