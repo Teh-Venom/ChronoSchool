@@ -15,7 +15,7 @@
 	<body>	
 	<header>
 		<?php
-			include "css/header.php";
+			include "php/header.php";
 		?>		
 	</header>
 	<?php
