@@ -31,7 +31,20 @@ body
 	width: 100%;
 	height: 100%;
 	display: inline-flex; 
+<<<<<<< HEAD
 	flex-direction: column;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+	z-index: -1;
+	flex-direction: column
+=======
+	flex-direction: column;
+>>>>>>> parent of 4bc6219... Merge branch 'master' of https://github.com/gabrielbrazs/ChronoSchool
+=======
+	flex-direction: column;
+>>>>>>> parent of 4bc6219... Merge branch 'master' of https://github.com/gabrielbrazs/ChronoSchool
+>>>>>>> 75715fe37c9d77096f801f4704b9bc0bd2fb9d8b
 }
 
 .logo{
