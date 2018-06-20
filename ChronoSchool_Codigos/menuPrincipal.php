@@ -3,9 +3,9 @@
 	<head>
 		<?php
 			session_start();
-			if($_SESSION['email'] == null)
+			if($_SESSION == null)
 			{
-				header("Location: index.php");
+				header("Location: login.php");
 			}
 		?>
 		<link href="css/style.css" rel="stylesheet"/>
@@ -14,20 +14,17 @@
 	</head>
 	<body>	
 	<header>
-		<div class='divLogoHeader'>
+		<div class='divLogo'>
 			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
 				<div class='divLogin'>
 				
 			</div>
-		</div>
-
-		<?php
-			include "php/navbar.php";
-		?>
+		</div>		
 	</header>
-	
+	<?php
+		include "php/navbar.php";
+	?>	
 	<div class="corpo">			
-		
 		
 	</div>	
 	
