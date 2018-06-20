@@ -14,7 +14,6 @@
 	</head>
 	<body>	
 	<header>
-<<<<<<< HEAD
 		<?php
 			include "php/header.php";
 		?>
@@ -22,20 +21,6 @@
 	<?php
 		include "php/navbar.php";
 	?>
-=======
-		<div class='divLogoHeader'>
-			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
-				<div class='divLogin'>
-				
-			</div>
-		</div>
-
-		<?php
-			include "php/navbar.php";
-		?>
-	</header>
-	
->>>>>>> parent of 47f654c... Comitamento
 	<div class="corpo">			
 		
 		

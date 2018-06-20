@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
 		<?php
+			session_start();
 			if($_SESSION == null)
 			{
 				header("location: login.php");
@@ -13,15 +14,21 @@
 	</head>
 	<body>	
 	<header>
-		<?php
-			include "php/header.php";
-		?>
+		<div class='divLogoHeader'>
+			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
+			<div class='divBotaoLogin'>
+				<?php
+					include "php/botao_perfil.php";
+				?>
+			</div>
+		</div>
+		
 	</header>
 		<?php 
 			include "php/navbar.php";
 		?>
 	
-	<div id="corpo">			
+	<div class="corpo">			
 		
 		
 	</div>	

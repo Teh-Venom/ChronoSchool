@@ -35,15 +35,11 @@ body
 	height: 100%;
 	display: inline-flex; 
 <<<<<<< HEAD
-<<<<<<< HEAD
 	flex-direction: column;
 =======
 	z-index: -1;
 	flex-direction: column
 >>>>>>> e77a14e95a68075aa2cf272c8b181c0487d0ed85
-=======
-	flex-direction: column
->>>>>>> parent of 47f654c... Comitamento
 }
 
 .logo{
