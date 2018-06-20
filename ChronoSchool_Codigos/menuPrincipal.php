@@ -14,18 +14,13 @@
 	</head>
 	<body>	
 	<header>
-		<div class='divLogoHeader'>
-			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
-				<div class='divLogin'>
-				
-			</div>
-		</div>
-
 		<?php
-			include "php/navbar.php";
+			include "php/header.php";
 		?>
 	</header>
-	
+	<?php
+		include "php/navbar.php";
+	?>
 	<div class="corpo">			
 		
 		
