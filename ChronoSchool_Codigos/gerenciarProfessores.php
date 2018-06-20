@@ -4,6 +4,12 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
+		<?php
+			if($_SESSION == null)
+			{
+				header("location: login.php");
+			}
+		?>
 	</head>
 	<body>	
 	<header>

@@ -4,6 +4,13 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
+		<?php
+			session_start();
+			if($_SESSION != null)
+			{
+				header("location: menuPrincipal.php");
+			}
+		?>
 	</head>
 	<body>	
 		<header>

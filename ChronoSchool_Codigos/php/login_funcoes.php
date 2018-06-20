@@ -15,7 +15,7 @@
 				{
 					session_start();
 					$_SESSION['email'] = $email;
-					header("Location: painel.php");
+					header("Location: menuPrincipal.php");
 				}
 				else
 				{

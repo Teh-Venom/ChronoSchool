@@ -6,42 +6,25 @@
 			if($_SESSION == null)
 			{
 				header("Location: login.php");
-			}	
+			}
 		?>
 		<link href="css/style.css" rel="stylesheet"/>
-		<link href="css/bootstrap.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
-		<title>Gerenciar Pessoas</title>
+		<title>Painel de Usuário</title>
 	</head>
 	<body>	
 	<header>
 		<div class='divLogo'>
 			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
-		</div>
-		<?php
-			include "php/navbar.php";
-		?>
-	</header>
-	
-	<div class="corpo">			
-		<div class="conteudo">
-			<div class="">
-				<center>
-					<div class="table">
-						<table border=2>		
-							<tr>  
-								<th> Nome</th>
-								<th> Email</th>
-							</tr>
-							<tr>
-								<td> nomezito</td>
-								<td> emailito</td>
-							</tr>
-						</table>
-					</div>
-				</center>
+				<div class='divLogin'>
+				
 			</div>
-		</div>
+		</div>		
+	</header>
+	<?php
+		include "php/navbar.php";
+	?>	
+	<div class="corpo">			
 		
 	</div>	
 	
