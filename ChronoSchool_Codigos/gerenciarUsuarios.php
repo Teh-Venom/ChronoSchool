@@ -17,19 +17,14 @@
 			<?php
 				include "php/header.php";
 			?>	
-			<nav>
+		</header>
+		<nav>
 			<?php
 				include "php/navbar.php";
 			?>
 			</nav>
-		</header>
-		
-		<div class="">
-			<p> </p>
-		</div>
-		<div class="divCorpo">
-			<div class="grid-container">
-				<div class="callout"> 														
+		<div class="corpo">
+			<div class="conteudo">								
 					<center class="grid-container">	
 						<form action="" method="POST">
 							<div class="large-6 medium-6 cell">											
@@ -47,7 +42,6 @@
 							</div>
 						</form>
 					</center>
-				</div>
 			</div>
 		</div>
 		<footer>

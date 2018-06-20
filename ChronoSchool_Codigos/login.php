@@ -10,15 +10,15 @@
 	  <link href="css/registro.css" rel="stylesheet">
 	</head>
 	<?php
-	 if(isset($_POST["login"]))
-	 {
-		include "php/login_funcoes.php";
-		$email = $_POST['email'];
+   if(isset($_POST["login"]))
+   {
+  	include "php/login_funcoes.php";
+  	$email = $_POST['email'];
     $senha = $_POST['senha'];
 
     logar($email,$senha);
-	 }
-	
+   }
+  session_start();
     if($_SESSION != null)
     {
       header("Location: menuPrincipal.php");
