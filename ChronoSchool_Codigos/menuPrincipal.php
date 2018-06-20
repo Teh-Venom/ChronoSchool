@@ -14,12 +14,9 @@
 	</head>
 	<body>	
 	<header>
-		<div class='divLogo'>
-			<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
-				<div class='divLogin'>
-				
-			</div>
-		</div>		
+		<?php
+			include "css/header.php";
+		?>		
 	</header>
 	<?php
 		include "php/navbar.php";
