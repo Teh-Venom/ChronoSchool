@@ -12,4 +12,14 @@ PRECISA ADICIONAR ESTILO ABNT P REFERENCIAS AUTOMATICAS
 ref tem que ser (autor, ano) nao as [1]
 
 
-1.	Internet, html, css, php, linguagem sql, BD mysql, apache, bootstrap, foundation, notepad++, IDE que o senes ta usando,  
+Internet,
+html
+css
+php
+linguagem sql
+BD mysql
+apache
+bootstrap
+foundation
+notepad++
+IDE que o senes ta usando <-- 
