@@ -7,10 +7,16 @@
 
 	if($_SESSION != null){
 		$stringBotaoHtml = "<div class='divBotaoLogin'>
-								<a href='login.php'> 
-									<input type='button' class='botaoLoginHeader' value='Menu' />
+								<a href='logout.php'> 
+									<input type='button' class='botaoLoginHeader' value='Sair' />
 								</a>
-							</div>";
+							</div>
+							<div class='divBotaoLogin'>
+								<a href='login.php'> 
+									<input type='button' class='botaoLoginHeader' value='Perfil' />
+								</a>
+							</div>
+							";
 	}
 ?>
 <div class='divLogoHeader'>

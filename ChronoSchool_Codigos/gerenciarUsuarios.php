@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link href="css/foundation.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<?php
 			session_start();
@@ -18,36 +17,29 @@
 				include "php/header.php";
 			?>	
 		</header>
-		<nav>
-			<?php
-				include "php/navbar.php";
-			?>
-			</nav>
+		<?php
+			include "php/navbar.php";
+		?>
 		<div class="corpo">
 			<div class="conteudo">								
-					<center class="grid-container">	
-						<form action="" method="POST">
-							<div class="large-6 medium-6 cell">											
-								<div class="primary callout">
-									Nome do Usuario
-									<a href="#" class="button">Alterar</a>
+				<center>	
+					<form action="" method="POST">
+						<div class="divMaior">	
+							<div class="divUsuario">											
+								<div class="inside">
+									<font size="3">Nome do Usuário </font>
+									<a href="#" class="botaoUsuario">Alterar</a>
 								</div>
 							</div>
-							
-							<div class="large-6 medium-6 cell">											
-								<div class="primary callout">
-									Nome do Usuario
-									<a href="#" class="button">Alterar</a>
-								</div>
-							</div>
-						</form>
-					</center>
+						</div>
+					</form>
+				</center>
 			</div>
 		</div>
 		<footer>
-			<center>
-				<h1>Footer</h1>
-			</center>
+
+				<img class="logo" src="images/logo.png" title="ChronoSchool"/>			
+
 		</footer>
 	</body>
 </html>

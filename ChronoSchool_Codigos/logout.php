@@ -6,11 +6,16 @@
 		<title>Pagina principal</title>
 		<?php
 			session_start();
-			if($_SESSION != null)
+			if($_SESSION == null)
 			{
-				header("location: menuPrincipal.php");
+				header("location: index.php");
 			}
 
+			if(isset($_POST['sair']))
+			{
+				session_destroy();
+				header("location:index.php");
+			}
 		?>
 	</head>
 	<body>	
@@ -22,9 +27,15 @@
 					
 		<div class="corpo">
 			<div class="conteudo">
-				<a href="registro.php" class="verticalElement"> 
-					<input type="button" class="botaoCorpo" value="Registre-se">
-				</a>
+				<h2> Deseja realmente sair?</h2>
+				<div class="conteudo">
+					<form action="" method="POST">
+						<a href="menuPrincipal.php">
+							<button class="botaoCorpo">Não</button>
+						</a>
+						<input type="submit" name="sair" class="botaoCorpo" value="Sim">
+					</form>
+				</div>
 			</div>
 		</div>
 
