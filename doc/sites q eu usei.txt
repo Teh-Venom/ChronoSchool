@@ -1,0 +1,25 @@
+http://www.decom.ufop.br/menotti/monoII102/files/BCC391-102-pm-10.1.4077-RafaelSimoesCoelhoDeSouza.pdf
+http://www.gestaoemacao.ufba.br/revistas/gav4n201.PDF#page=49
+https://projetos.inf.ufsc.br/arquivos_projetos/projeto_270/monografiaAbnt.pdf **
+https://www.ifgoiano.edu.br/home/images/RV/Cursos_Tecnicos/Informatica/Ementas_Tecnico_em_Informatica_27-08-2014.pdf
+http://repositorio.roca.utfpr.edu.br/jspui/bitstream/1/2020/1/PB_COADS_2013_2_06.pdf
+
+
+https://en.wikipedia.org/wiki/Schedule
+https://pt.wikipedia.org/wiki/Escola
+
+PRECISA ADICIONAR ESTILO ABNT P REFERENCIAS AUTOMATICAS
+ref tem que ser (autor, ano) nao as [1]
+
+
+Internet,
+html
+css
+php
+linguagem sql
+BD mysql
+apache
+bootstrap
+foundation
+notepad++
+IDE que o senes ta usando <-- 
