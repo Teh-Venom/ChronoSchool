@@ -10,13 +10,15 @@
 	  <link href="css/registro.css" rel="stylesheet">
 	</head>
 	<?php
-    if($_SESSION['email'] != null)
+    session_start();
+    if($_SESSION != null)
     {
       header("location: painel.php");
     }
+
 	 if(isset($_POST["registrar"]))
 	 {
-		include "registro_funcoes.php";
+		include "php/registro_funcoes.php";
 		
 		$nome = $_POST['primeiroNome'];
 		$ultNome = $_POST['ultimoNome'];

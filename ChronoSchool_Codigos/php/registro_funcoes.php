@@ -1,21 +1,43 @@
 <?php
 	function registrar($nome,$ultimoNome,$email,$senha,$senhaConf)
-	{
-		$dados = tratamento($nome,$ultimoNome,$email,$senha,$senhaConf);
-		
-		if($dados[3] == $dados[4])
+	{	
+		include "conexao.php";
+
+		$sql = "SELECT COUNT(*) AS resultado FROM `usuario` WHERE email = ?";
+		$verificacao = $conexao -> prepare($sql);
+		$verificacao -> execute(array($email));
+		$resultado = null;
+
+		foreach ($verificacao as $x)
 		{
-			include "conexao.php";
-			$sql = "SCRIPT SQL AQUI "; 
-				
-			$registo = $conexao -> prepare($sql);
-			$registro -> execute(array($valores));
+			$resultado  = $x['resultado'];
 		}
+		
+		if($resultado <= 0)
+		{
+			
+			if($senha == $senhaConf)
+			{
+				
+				$sql = "INSERT INTO comum VALUES('',?,?,NULL,NULL);
+						SELECT @ultimo_id := MAX(comum.idComum) FROM comum;
+						INSERT INTO usuario VALUES('',?,?,NULL,@ultimo_id);
+						"; 
+				$registro = $conexao -> prepare($sql);
+				$registro -> execute(array($nome,$ultimoNome,$email,md5($senha)));
+				session_start();
+				$_SESSION['email'] = $email;
+				header("location: menuPrincipal.php");
+			}
+			else
+			{
+				echo "ERoROr";
+			}
+		}	
 		else
 		{
-			echo "feião";
+			header("location:erroRegistro.php");	
+			return;
 		}
 	}
-	
-	registrar("Nome","Ultimo nome","Email@email.com","senha","senha");
 ?>
