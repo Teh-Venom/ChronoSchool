@@ -4,6 +4,7 @@
 		<link href="css/style.css" rel="stylesheet">
 		<?php
 			session_start();
+			$_SESSION = "aaaaaaaaa";
 			if($_SESSION == null)
 			{
 				header("location: login.php");

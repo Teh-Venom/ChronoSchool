@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
 		<?php
+			$_SESSION['email'] = "aaaaaa";
 			if($_SESSION == null)
 			{
 				header("location: login.php");

@@ -3,9 +3,10 @@
 	<head>
 		<?php
 			session_start();
+			$_SESSION = "aaaaaaaaa";
 			if($_SESSION == null)
 			{
-				header("Location: login.php");
+				//header("Location: login.php");
 			}
 		?>
 		<link href="css/style.css" rel="stylesheet"/>

@@ -3,6 +3,8 @@
 	<head>
 		<?php
 			session_start();
+			$_SESSION = "AAAAAA";
+			
 			if($_SESSION == null)
 			{
 				header("Location: login.php");
