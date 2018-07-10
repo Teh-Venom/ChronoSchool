@@ -3,7 +3,9 @@
 	<head>
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
-		<title>Pagina principal</title>
+		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
+		<title>Editar professor></title>
 		<script>
 			function validateForm() {
 				var x = document.forms["atualizarProfessor"]["inicial"].value;

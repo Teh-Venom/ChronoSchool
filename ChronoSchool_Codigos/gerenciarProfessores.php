@@ -4,6 +4,8 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<title>Gerenciar Professores</title>
+		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
 		<?php
 			session_start();
 			if($_SESSION == null)

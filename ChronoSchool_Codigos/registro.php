@@ -2,6 +2,8 @@
 <html lang="PT-BR">
 	<head>
 	  <title>Registro</title>
+    <link rel="icon" href="images/icone.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
 	  <!-- Bootstrap core CSS-->
 	  <link href="css/bootstrap.css" rel="stylesheet">
 	  <!-- Custom fonts for this template-->

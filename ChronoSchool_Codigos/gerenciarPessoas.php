@@ -10,6 +10,8 @@
 		?>
 		<link href="css/style.css" rel="stylesheet"/>
 		<link href="css/bootstrap.css" rel="stylesheet"/>
+		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
 		<meta charset="UTF-8">
 		<title>Gerenciar Pessoas</title>
 	</head>

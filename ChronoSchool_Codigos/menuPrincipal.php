@@ -10,6 +10,8 @@
 		?>
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
+		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
 		<title>Painel de Usuário</title>
 	</head>
 	<body>	

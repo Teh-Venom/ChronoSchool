@@ -4,6 +4,8 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<title>Perfil</title>
+		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
 		<script type='text/javascript'>
 			function confirmar_cadastro()
 			{

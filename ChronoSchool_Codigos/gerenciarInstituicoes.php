@@ -11,6 +11,7 @@
 				header("location: login.php");
 			}
 		?>
+		<title>Insituições</title>
 	</head>
 	
 	<body>
@@ -24,19 +25,7 @@
 		?>
 		<div class="corpo">
 			<div class="conteudo">								
-				<center>	
-					<form action="" method="POST">
-						<div class="divMaior">	
-							<div class="divUsuario">											
-								<div class="inside">
-									<font size="3">Nome do Usuário </font>
-									<a href="#" class="botaoUsuario">Alterar</a>
-								</div>
-							</div>
-						</div>
-					</form>
-					<a href="cadastrarUsuario.php" class="botaoUsuario">Alterar</a>
-				</center>
+				
 			</div>
 		</div>
 		<footer>

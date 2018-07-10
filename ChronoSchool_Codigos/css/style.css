@@ -36,7 +36,9 @@ body
 	z-index: -1;
 	flex-direction: column
 }
-
+a{
+	text-decoration:none;
+}
 .logo{
 	padding-top: 10px;	
 	width:200px;
