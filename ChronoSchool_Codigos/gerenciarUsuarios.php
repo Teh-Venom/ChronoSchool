@@ -27,16 +27,59 @@
 			<div class="conteudo">								
 				<center>	
 					<form action="" method="POST">
-						<div class="divMaior">	
-							<div class="divUsuario">											
-								<div class="inside">
-									<font size="3">Nome do Usuário </font>
-									<a href="#" class="botaoUsuario">Alterar</a>
-								</div>
-							</div>
-						</div>
+						<?php
+							include "php/conexao.php";
+
+							$sql = "SELECT U.idUsuario,U.email,U.Permissoes_idPermissoes,C.nome,C.idComum,P.tipo FROM usuario as U 
+							INNER JOIN permissoes AS P ON P.idPermissoes = U.Permissoes_idPermissoes
+							INNER JOIN comum as C ON C.idComum = U.comum_IdComum 
+							WHERE U.Permissoes_idPermissoes != 1";
+							$usuarios = $conexao ->prepare($sql);
+							$usuarios -> execute();
+
+							foreach ($usuarios as $u)
+							{	
+								$idUsuario = $u['idUsuario'];
+								$idComum = $u['idComum'];
+								$email = $u['email'];
+								$nome = $u['nome'];
+								$nomePermissao = $u['tipo'];
+								
+								echo "
+								<div class='divMaior'>	
+									<div class='divUsuario'>											
+										<div class='inside'>
+											<table style='width:100%'>
+												<tr>
+													<td>
+														<font size='3'><b>Nome:	</b> $nome</font>
+													</td>
+													<td>
+														<font size='3'><b>E-mail: </b> $email</font>
+													</td> 
+													<td>
+														<a href='editarUsuarios.php?uid=$idUsuario&cid=$idComum&email=$email&nc=$nome' class='botaoUsuario'>Alterar</a>
+													<td>
+													<td>
+														<a href='apagarUsuarios.php?uid=$idUsuario&cid=$idComum&email=$email&nc=$nome' class='botaoUsuario'>Apagar</a>
+													</td>
+												</tr>
+												<tr>
+													<td colspan='3'>
+														<font size='3' style='text-align: left;'><b>Tipo de Usuário:</b> $nomePermissao</font>
+													</td>
+													
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>";
+							}
+						?>
+
 					</form>
-					<a href="cadastrarUsuario.php" class="botaoUsuario">Alterar</a>
+					<br><br><br>
+					<a href="cadastrarUsuario.php" class="botaoUsuario">Cadastrar usuário</a>
 				</center>
 			</div>
 		</div>

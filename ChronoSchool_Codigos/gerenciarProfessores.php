@@ -31,7 +31,8 @@
 						<?php
 							include "php/conexao.php";
 
-							$sql = "SELECT idProfessor,idHorariosDisponiveisProfessores,nomeProfessor,horarioInicial,horarioFinal FROM `professor` INNER JOIN horariosdisponiveisprofessores ON horariosdisponiveisprofessores.idHorariosDisponiveisProfessores = professor.HorariosDisponiveisProfessores_idHorariosDisponiveisProfessores";
+							$sql = "SELECT idProfessor,idHorariosDisponiveisProfessores,nomeProfessor,horarioInicial,horarioFinal FROM `professor` 
+									INNER JOIN horariosdisponiveisprofessores ON horariosdisponiveisprofessores.idHorariosDisponiveisProfessores = professor.HorariosDisponiveisProfessores_idHorariosDisponiveisProfessores";
 							$professores = $conexao ->prepare($sql);
 							$professores -> execute();
 
@@ -47,10 +48,30 @@
 								<div class='divMaior'>	
 									<div class='divUsuario'>											
 										<div class='inside'>
-											<font size='3'><b>Professor:</b> $nome</font>
-											<font size='3'><b>Período disponível:</b> $inicial <b>até </b> $final</font>
-											<a href='editarProfessores.php?pid=$idProfessor&hid=$idHorario&np=$nome&inicial=$inicial&final=$final' class='botaoUsuario'>Alterar</a>
-											<a href='apagarProfessores.php?pid=$idProfessor&np=$nome' class='botaoUsuario'>Apagar</a>
+											
+											<table style='width:100%'>
+											<tr>
+												<td>
+													<font size='3'><b>Professor:</b> $nome</font>
+												</td>
+												<td>
+													<a href='editarProfessores.php?pid=$idProfessor&hid=$idHorario&np=$nome&inicial=$inicial&final=$final' class='botaoUsuario'>Alterar</a>
+												<td>
+												<td>
+													<a href='apagarProfessores.php?pid=$idProfessor&np=$nome' class='botaoUsuario'>Apagar</a>
+											  	</td>
+											</tr>
+											<tr>
+												<td>
+													<font size='3'><b>Período disponível:</b>".date('H:i', strtotime($inicial))." <b>até </b>".date('H:i', strtotime($final))."</font>
+												</td> 
+											  	
+											</tr>
+										  </table>
+
+
+
+
 										</div>
 									</div>
 								</div>";

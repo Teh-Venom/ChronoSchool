@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Jul-2018 às 22:05
+-- Generation Time: 10-Jul-2018 às 22:13
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -283,7 +283,7 @@ CREATE TABLE `usuario` (
   `idUsuario` int(11) NOT NULL,
   `email` varchar(60) NOT NULL,
   `senha` char(32) NOT NULL,
-  `permissoes_idPermissoes` int(11) NOT NULL,
+  `Permissoes_idPermissoes` int(11) NOT NULL,
   `Comum_idComum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -291,7 +291,7 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `email`, `senha`, `permissoes_idPermissoes`, `Comum_idComum`) VALUES
+INSERT INTO `usuario` (`idUsuario`, `email`, `senha`, `Permissoes_idPermissoes`, `Comum_idComum`) VALUES
 (4, 'email.email@email.com', '202cb962ac59075b964b07152d234b70', 1, 5),
 (6, 'jooj@jooj.com', '4297f44b13955235245b2497399d7a93', 2, 7),
 (7, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', 2, 11),
@@ -432,7 +432,7 @@ ALTER TABLE `turmamateria`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idUsuario`),
-  ADD KEY `fk_Usuario_Administrativo1_idx` (`permissoes_idPermissoes`),
+  ADD KEY `fk_Usuario_Administrativo1_idx` (`Permissoes_idPermissoes`),
   ADD KEY `fk_Usuario_Comum1_idx` (`Comum_idComum`);
 
 --

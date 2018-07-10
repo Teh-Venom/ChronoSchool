@@ -21,7 +21,7 @@
 				
 				$sql = "INSERT INTO comum VALUES('',?,?,NULL,NULL);
 						SELECT @ultimo_id := MAX(comum.idComum) FROM comum;
-						INSERT INTO usuario VALUES('',?,?,NULL,@ultimo_id);
+						INSERT INTO usuario VALUES('',?,?,'1',@ultimo_id);
 						"; 
 				$registro = $conexao -> prepare($sql);
 				$registro -> execute(array($nome,$ultimoNome,$email,md5($senha)));
