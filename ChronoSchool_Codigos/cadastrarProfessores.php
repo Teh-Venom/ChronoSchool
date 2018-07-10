@@ -3,7 +3,7 @@
 	<head>
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
-		<title>Pagina principal</title>
+		<title>Cadastro de Professores</title>
 		<script>
 			function validateForm() {
 				var x = document.forms["cadastrarProfessor"]["inicial"].value;

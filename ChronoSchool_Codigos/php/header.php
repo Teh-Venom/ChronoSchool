@@ -12,7 +12,7 @@
 								</a>
 							</div>
 							<div class='divBotaoLogin'>
-								<a href='login.php'> 
+								<a href='perfil.php'> 
 									<input type='button' class='botaoLoginHeader' value='Perfil' />
 								</a>
 							</div>
@@ -21,7 +21,7 @@
 ?>
 <div class='divLogoHeader'>
 	<img class='logo' src='images/logo.png' title='ChronoSchool'/>			
-		<div class='divBotaoLogin'>
-			<?= $stringBotaoHtml?>
-		</div>
+	<div class='divBotaoLogin'>
+		<?= $stringBotaoHtml?>
+	</div>
 </div>
