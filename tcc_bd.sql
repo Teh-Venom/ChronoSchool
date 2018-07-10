@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Jul-2018 às 19:06
+-- Generation Time: 10-Jul-2018 às 22:05
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -23,18 +23,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `tcc_bd` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `tcc_bd`;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `administrativo`
---
-
-CREATE TABLE `administrativo` (
-  `idAdministrativo` int(11) NOT NULL,
-  `status` int(11) NOT NULL,
-  `permissao` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -171,7 +159,7 @@ CREATE TABLE `horariosdisponiveisprofessores` (
 --
 
 INSERT INTO `horariosdisponiveisprofessores` (`idHorariosDisponiveisProfessores`, `horarioInicial`, `horarioFinal`) VALUES
-(2, '13:32:00', '14:32:00'),
+(2, '13:00:00', '14:00:00'),
 (3, '12:00:00', '15:00:00'),
 (4, '04:00:00', '06:00:00');
 
@@ -208,6 +196,26 @@ CREATE TABLE `materia` (
   `idMateria` int(11) NOT NULL,
   `materia` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `permissoes`
+--
+
+CREATE TABLE `permissoes` (
+  `idPermissoes` int(11) NOT NULL,
+  `tipo` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `permissoes`
+--
+
+INSERT INTO `permissoes` (`idPermissoes`, `tipo`) VALUES
+(1, 'Administrador'),
+(2, 'Gerente'),
+(3, 'Aluno');
 
 -- --------------------------------------------------------
 
@@ -275,7 +283,7 @@ CREATE TABLE `usuario` (
   `idUsuario` int(11) NOT NULL,
   `email` varchar(60) NOT NULL,
   `senha` char(32) NOT NULL,
-  `Administrativo_idAdministrativo` int(11) DEFAULT NULL,
+  `permissoes_idPermissoes` int(11) NOT NULL,
   `Comum_idComum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -283,23 +291,17 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `email`, `senha`, `Administrativo_idAdministrativo`, `Comum_idComum`) VALUES
-(4, 'email.email@email.com', '202cb962ac59075b964b07152d234b70', NULL, 5),
-(6, 'jooj@jooj.com', '4297f44b13955235245b2497399d7a93', NULL, 7),
-(7, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', NULL, 11),
-(8, 'email@email.com', 'e8d95a51f3af4a3b134bf6bb680a213a', NULL, 12),
-(10, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', NULL, 14),
-(11, 'email@gmail.com', '4297f44b13955235245b2497399d7a93', NULL, 15);
+INSERT INTO `usuario` (`idUsuario`, `email`, `senha`, `permissoes_idPermissoes`, `Comum_idComum`) VALUES
+(4, 'email.email@email.com', '202cb962ac59075b964b07152d234b70', 1, 5),
+(6, 'jooj@jooj.com', '4297f44b13955235245b2497399d7a93', 2, 7),
+(7, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', 2, 11),
+(8, 'email@email.com', 'e8d95a51f3af4a3b134bf6bb680a213a', 2, 12),
+(10, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', 2, 14),
+(11, 'email@gmail.com', '4297f44b13955235245b2497399d7a93', 3, 15);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `administrativo`
---
-ALTER TABLE `administrativo`
-  ADD PRIMARY KEY (`idAdministrativo`);
 
 --
 -- Indexes for table `aula`
@@ -391,6 +393,12 @@ ALTER TABLE `materia`
   ADD PRIMARY KEY (`idMateria`);
 
 --
+-- Indexes for table `permissoes`
+--
+ALTER TABLE `permissoes`
+  ADD PRIMARY KEY (`idPermissoes`);
+
+--
 -- Indexes for table `professor`
 --
 ALTER TABLE `professor`
@@ -424,18 +432,12 @@ ALTER TABLE `turmamateria`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idUsuario`),
-  ADD KEY `fk_Usuario_Administrativo1_idx` (`Administrativo_idAdministrativo`),
+  ADD KEY `fk_Usuario_Administrativo1_idx` (`permissoes_idPermissoes`),
   ADD KEY `fk_Usuario_Comum1_idx` (`Comum_idComum`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `administrativo`
---
-ALTER TABLE `administrativo`
-  MODIFY `idAdministrativo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `aula`
@@ -490,6 +492,12 @@ ALTER TABLE `instituicao`
 --
 ALTER TABLE `materia`
   MODIFY `idMateria` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `permissoes`
+--
+ALTER TABLE `permissoes`
+  MODIFY `idPermissoes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `professor`
@@ -573,13 +581,6 @@ ALTER TABLE `turmacomum`
 ALTER TABLE `turmamateria`
   ADD CONSTRAINT `fk_Materia_has_Turma_Materia1` FOREIGN KEY (`Materia_idMateria`) REFERENCES `materia` (`idMateria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Materia_has_Turma_Turma1` FOREIGN KEY (`Turma_idTurma`) REFERENCES `turma` (`idTurma`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Limitadores para a tabela `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `fk_Usuario_Administrativo1` FOREIGN KEY (`Administrativo_idAdministrativo`) REFERENCES `administrativo` (`idAdministrativo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Usuario_Comum1` FOREIGN KEY (`Comum_idComum`) REFERENCES `comum` (`idComum`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
