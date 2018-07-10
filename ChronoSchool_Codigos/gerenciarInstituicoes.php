@@ -11,7 +11,7 @@
 				header("location: login.php");
 			}
 		?>
-		<title>Insituições</title>
+		<title>Instuições</title>
 	</head>
 	
 	<body>
