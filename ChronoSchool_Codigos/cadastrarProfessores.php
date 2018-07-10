@@ -57,7 +57,7 @@
 			<center>	
 				<form action="" name="cadastrarProfessor" onsubmit="return validateForm()" method="POST">
 					Nome do Professor
-					<input type="text" name="nome_professor" required autofocus> <br><br>
+					<input type="text" name="nome_professor" placeholder="Insira o nome" required autofocus> <br><br>
 					Utilize as setas para inserir o horário <br><br>
 					Horario disponível Inicial
 					<input type="time" name="inicial" value="00:00:00" step="1800" onkeydown="return false" required> <br><br>

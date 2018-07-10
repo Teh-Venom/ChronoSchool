@@ -62,10 +62,11 @@
 				<form action="" name="atualizarProfessor" onsubmit="return validateForm()" method="POST">
 					Alterar Nome do Professor
 					<input type="text" name="nome_professor" value="<?php echo $nome?>" required autofocus> <br><br>
+					Utilize as setas para inserir o horário <br><br>
 					Alterar o horário disponível inicial
-					<input type="time" name="inicial" value="<?php echo $inicial?>"required> <br><br>
+					<input type="time" name="inicial" value="<?php echo $inicial?>"step="1800" onkeydown="return false" required> <br><br>
 					Alterar o horário disponível final
-					<input type="time" name="final" value="<?php echo $final?>" required> <br><br>	
+					<input type="time" name="final" value="<?php echo $final?>" step="1800" onkeydown="return false" required> <br><br>	
 					<br><br>
 					<input type="submit" class="botaoUsuario" name="alterar" value="Atualizar">
 				</form>
