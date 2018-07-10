@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link href="css/style.css" rel="stylesheet"/>
+		<meta charset="UTF-8">
+		<title>Pagina principal</title>
+		<?php
+			session_start();
+			if($_SESSION == null)
+			{
+				header("location: login.php");
+			}		
+
+			if(isset($_POST['cadastrar']))
+			{
+				include "php/conexao.php";
+
+				$nome = $_POST['nome_professor'];
+				$inicial = $_POST['inicial'];
+				$final = $_POST['final'];
+
+				$sql="INSERT INTO  `horariosdisponiveisprofessores` VALUES ('',?,?);
+						SELECT @ultimo_id := MAX(horariosdisponiveisprofessores.idHorariosDisponiveisProfessores) FROM horariosdisponiveisprofessores;
+					INSERT INTO `professor` VALUES ('',?,@ultimo_id)";
+				$cadastro = $conexao->prepare($sql);
+				$cadastro -> execute(array($inicial,$final,$nome));
+
+				header("Location: gerenciarProfessores.php");
+			}	
+		?>
+	</head>
+	<body>	
+	<header>
+		<?php
+			include "php/header.php";
+		?>
+	</header>
+	<?php 
+		include "php/navbar.php";
+	?>
+	
+	<div class="corpo">			
+		<div class="conteudo">								
+			<center>	
+				<form action="" method="POST">
+					Nome do Professor
+					<input type="text" name="nome_professor" required autofocus> <br><br>
+					Horario disponível Inicial
+					<input type="time" name="inicial" required> <br><br>
+					Horario disponível Final
+					<input type="time" name="final" required> <br><br>	
+					<br><br>
+					<input type="submit" class="botaoUsuario" name="cadastrar" value="Cadastrar professor">
+				</form>
+			</center>
+		</div>
+	</div>	
+	
+	<footer>
+		<div>
+			<img class="logo" src="images/logo.png" title="ChronoSchool"/>			
+		</div>
+	</footer>
+	</body>
+</html>

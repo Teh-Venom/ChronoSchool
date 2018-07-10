@@ -33,6 +33,7 @@
 							</div>
 						</div>
 					</form>
+					<a href="cadastrarUsuario.php" class="botaoUsuario">Alterar</a>
 				</center>
 			</div>
 		</div>
