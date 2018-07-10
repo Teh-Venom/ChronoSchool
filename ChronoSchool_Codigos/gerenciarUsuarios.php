@@ -58,10 +58,10 @@
 														<font size='3'><b>E-mail: </b> $email</font>
 													</td> 
 													<td>
-														<a href='editarUsuarios.php?uid=$idUsuario&cid=$idComum&email=$email&nc=$nome' class='botaoUsuario'>Alterar</a>
+														<a href='editarUsuarios.php?uid=$idUsuario' class='botaoUsuario'>Alterar</a>
 													<td>
 													<td>
-														<a href='apagarUsuarios.php?uid=$idUsuario&cid=$idComum&email=$email&nc=$nome' class='botaoUsuario'>Apagar</a>
+														<a href='apagarUsuarios.php?uid=$idUsuario&email=$email&nc=$nome' class='botaoUsuario'>Apagar</a>
 													</td>
 												</tr>
 												<tr>

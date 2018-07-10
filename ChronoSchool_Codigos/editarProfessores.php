@@ -68,6 +68,7 @@
 					Alterar o horário disponível final
 					<input type="time" name="final" value="<?php echo $final?>" step="1800" onkeydown="return false" required> <br><br>	
 					<br><br>
+					<a href='gerenciarProfessores.php' class='botaoUsuario'>Cancelar</a>
 					<input type="submit" class="botaoUsuario" name="alterar" value="Atualizar">
 				</form>
 			</center>
