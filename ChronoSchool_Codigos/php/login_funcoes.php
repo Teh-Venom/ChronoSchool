@@ -9,11 +9,13 @@
 
 		foreach ($verifica as $x) 
 		{
+			$id = $x['idUsuario'];
 			if($email == $x['email'])
 			{
 				if($senha == $senha)
 				{
 					session_start();
+					$_SESSION['id'] = $id;
 					$_SESSION['email'] = $email;
 					header("Location: menuPrincipal.php");
 				}

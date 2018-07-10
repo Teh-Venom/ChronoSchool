@@ -4,6 +4,7 @@
 		<link href="css/style.css" rel="stylesheet">
 		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
 		<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
+		<title>Gerenciar Usuários</title>
 		<?php
 			session_start();
 			if($_SESSION == null)

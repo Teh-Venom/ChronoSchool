@@ -26,6 +26,7 @@
 		<div class="corpo">
 			<div class="conteudo">								
 				
+				<a href="cadastrarInsituicao.php" class="botaoUsuario">Cadastrar nova instituição</a>
 			</div>
 		</div>
 		<footer>
