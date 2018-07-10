@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Jun-2018 às 02:48
+-- Generation Time: 10-Jul-2018 às 19:06
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -70,8 +70,8 @@ CREATE TABLE `comum` (
   `idComum` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `ultimo_nome` varchar(30) NOT NULL,
-  `cpf` varchar(15) NOT NULL,
-  `telefone` varchar(15) NOT NULL
+  `cpf` varchar(15) DEFAULT NULL,
+  `telefone` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -79,9 +79,11 @@ CREATE TABLE `comum` (
 --
 
 INSERT INTO `comum` (`idComum`, `nome`, `ultimo_nome`, `cpf`, `telefone`) VALUES
-(5, 'nome', 'ultimonome', '', ''),
-(7, 'primeironome', 'ultimonome', '', ''),
-(10, 'primeironome', 'ultimonome', '', '');
+(5, 'Jorge', 'Batista', '', ''),
+(7, 'Rubens', 'George', '', ''),
+(8, 'Cesar', 'SobreoNome', NULL, NULL),
+(14, 'Cezar', '123', NULL, NULL),
+(15, 'Teste', 'Teste', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -160,9 +162,18 @@ CREATE TABLE `horariosdisponiveisinstituicao` (
 
 CREATE TABLE `horariosdisponiveisprofessores` (
   `idHorariosDisponiveisProfessores` int(11) NOT NULL,
-  `horarioInicial` date NOT NULL,
-  `horarioFinal` date NOT NULL
+  `horarioInicial` time NOT NULL,
+  `horarioFinal` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `horariosdisponiveisprofessores`
+--
+
+INSERT INTO `horariosdisponiveisprofessores` (`idHorariosDisponiveisProfessores`, `horarioInicial`, `horarioFinal`) VALUES
+(2, '13:32:00', '14:32:00'),
+(3, '12:00:00', '15:00:00'),
+(4, '04:00:00', '06:00:00');
 
 -- --------------------------------------------------------
 
@@ -209,6 +220,15 @@ CREATE TABLE `professor` (
   `nomeProfessor` varchar(45) NOT NULL,
   `HorariosDisponiveisProfessores_idHorariosDisponiveisProfessores` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `professor`
+--
+
+INSERT INTO `professor` (`idProfessor`, `nomeProfessor`, `HorariosDisponiveisProfessores_idHorariosDisponiveisProfessores`) VALUES
+(1, 'Araujo', 2),
+(2, 'Jurandir', 3),
+(3, 'Sandra', 4);
 
 -- --------------------------------------------------------
 
@@ -265,7 +285,11 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`idUsuario`, `email`, `senha`, `Administrativo_idAdministrativo`, `Comum_idComum`) VALUES
 (4, 'email.email@email.com', '202cb962ac59075b964b07152d234b70', NULL, 5),
-(6, 'jooj@jooj.com', '4297f44b13955235245b2497399d7a93', NULL, 7);
+(6, 'jooj@jooj.com', '4297f44b13955235245b2497399d7a93', NULL, 7),
+(7, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', NULL, 11),
+(8, 'email@email.com', 'e8d95a51f3af4a3b134bf6bb680a213a', NULL, 12),
+(10, 'cesar@email.com', '202cb962ac59075b964b07152d234b70', NULL, 14),
+(11, 'email@gmail.com', '4297f44b13955235245b2497399d7a93', NULL, 15);
 
 --
 -- Indexes for dumped tables
@@ -423,7 +447,7 @@ ALTER TABLE `aula`
 -- AUTO_INCREMENT for table `comum`
 --
 ALTER TABLE `comum`
-  MODIFY `idComum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idComum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `cronograma`
@@ -453,7 +477,7 @@ ALTER TABLE `horariosdisponiveisinstituicao`
 -- AUTO_INCREMENT for table `horariosdisponiveisprofessores`
 --
 ALTER TABLE `horariosdisponiveisprofessores`
-  MODIFY `idHorariosDisponiveisProfessores` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idHorariosDisponiveisProfessores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `instituicao`
@@ -471,7 +495,7 @@ ALTER TABLE `materia`
 -- AUTO_INCREMENT for table `professor`
 --
 ALTER TABLE `professor`
-  MODIFY `idProfessor` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProfessor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `turma`
@@ -483,7 +507,7 @@ ALTER TABLE `turma`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
