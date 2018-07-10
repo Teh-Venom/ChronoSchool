@@ -4,6 +4,16 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
+		<script>
+			function validateForm() {
+				var x = document.forms["atualizarProfessor"]["inicial"].value;
+				var y = document.forms["atualizarProfessor"]["final"].value;
+				if (x >= y) {
+					alert("O horário inicial deve ocorrer antes que o horário final.");
+					return false;
+				}
+			}
+		</script>
 		<?php
 			session_start();
 			if($_SESSION == null)
@@ -19,7 +29,18 @@
 
 			if(isset($_POST['alterar']))
 			{
-				
+				$nome_user = $_POST['nome_professor'];
+				$inicial_user = $_POST['inicial'];
+				$final_user = $_POST['final'];
+				include "php/conexao.php";
+				$sql=	"UPDATE professor as prof
+						INNER JOIN horariosdisponiveisprofessores as horario ON horario.idHorariosDisponiveisProfessores = prof.HorariosDisponiveisProfessores_idHorariosDisponiveisProfessores
+						SET prof.nomeProfessor= ? , horario.horarioInicial= ? , horario.horarioFinal = ?
+						WHERE prof.idProfessor = ?";
+				$cadastro = $conexao->prepare($sql);
+				$cadastro -> execute(array($nome_user, $inicial_user, $final_user, $idProfessor));
+			
+				header("Location: gerenciarProfessores.php");
 			}	
 		?>
 	</head>
@@ -36,7 +57,7 @@
 	<div class="corpo">			
 		<div class="conteudo">								
 			<center>	
-				<form action="" method="POST">
+				<form action="" name="atualizarProfessor" onsubmit="return validateForm()" method="POST">
 					Alterar Nome do Professor
 					<input type="text" name="nome_professor" value="<?php echo $nome?>" required autofocus> <br><br>
 					Alterar o horário disponível inicial

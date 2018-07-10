@@ -40,14 +40,15 @@
 								$nome = $p['nomeProfessor'];
 								$inicial = $p['horarioInicial'];
 								$final = $p['horarioFinal'];
-
+								
 								echo "
 								<div class='divMaior'>	
 									<div class='divUsuario'>											
 										<div class='inside'>
 											<font size='3'><b>Professor:</b> $nome</font>
-											<font size='3'><b>Horario:</b> $inicial <b>ás </b> $final</font>
+											<font size='3'><b>Período disponível:</b> $inicial <b>até </b> $final</font>
 											<a href='editarProfessores.php?pid=$idProfessor&hid=$idHorario&np=$nome&inicial=$inicial&final=$final' class='botaoUsuario'>Alterar</a>
+											<a href='apagarProfessores.php?pid=$idProfessor&np=$nome' class='botaoUsuario'>Apagar</a>
 										</div>
 									</div>
 								</div>";

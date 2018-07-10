@@ -4,6 +4,16 @@
 		<link href="css/style.css" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<title>Pagina principal</title>
+		<script>
+			function validateForm() {
+				var x = document.forms["cadastrarProfessor"]["inicial"].value;
+				var y = document.forms["cadastrarProfessor"]["final"].value;
+				if (x >= y) {
+					alert("O horário inicial deve ocorrer antes que o horário final.");
+					return false;
+				}
+			}
+		</script>
 		<?php
 			session_start();
 			if($_SESSION == null)
@@ -13,6 +23,7 @@
 
 			if(isset($_POST['cadastrar']))
 			{
+				
 				include "php/conexao.php";
 
 				$nome = $_POST['nome_professor'];
@@ -42,13 +53,14 @@
 	<div class="corpo">			
 		<div class="conteudo">								
 			<center>	
-				<form action="" method="POST">
+				<form action="" name="cadastrarProfessor" onsubmit="return validateForm()" method="POST">
 					Nome do Professor
 					<input type="text" name="nome_professor" required autofocus> <br><br>
+					Utilize as setas para inserir o horário <br><br>
 					Horario disponível Inicial
-					<input type="time" name="inicial" required> <br><br>
+					<input type="time" name="inicial" value="00:00:00" step="1800" onkeydown="return false" required> <br><br>
 					Horario disponível Final
-					<input type="time" name="final" required> <br><br>	
+					<input type="time" name="final" value="00:00:00" step="1800" onkeydown="return false" required> <br><br>	
 					<br><br>
 					<input type="submit" class="botaoUsuario" name="cadastrar" value="Cadastrar professor">
 				</form>
